@@ -26,7 +26,7 @@ public class PracticeFormTest extends TestBase {
             subject = fake.options().option("English", "Maths", "Physics"),
             address = fake.address().fullAddress(),
             hobbies = fake.options().option("Sports", "Reading", "Music"),
-            picture = fake.options().option("gif.jpg", "jpg.jpg", "png.jpg"),
+            picture = fake.options().option("img/gif.jpg", "img/jpg.jpg", "img/png.jpg"),
             state = "NCR",
             city = "Delhi";
 
