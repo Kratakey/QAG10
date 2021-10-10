@@ -26,7 +26,8 @@ public class PracticeFormTest extends TestBase {
             subject = fake.options().option("English", "Maths", "Physics"),
             address = fake.address().fullAddress(),
             hobbies = fake.options().option("Sports", "Reading", "Music"),
-            picture = fake.options().option("img/gif.jpg", "img/jpg.jpg", "img/png.jpg"),
+            picture = fake.options().option("gif.jpg", "jpg.jpg", "png.jpg"),
+            pictureLink = "img/"+picture,
             state = "NCR",
             city = "Delhi";
 
@@ -43,7 +44,7 @@ public class PracticeFormTest extends TestBase {
         studentRegistrationForm.fillDateOfBirth(year, month, day);
         studentRegistrationForm.selectSubject(subject);
         studentRegistrationForm.selectHobbies(hobbies);
-        studentRegistrationForm.uploadPicture(picture);
+        studentRegistrationForm.uploadPicture(pictureLink);
         studentRegistrationForm.fillAddress(address);
         studentRegistrationForm.selectState(state);
         studentRegistrationForm.selectCity(city);

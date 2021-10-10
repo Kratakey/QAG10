@@ -31,6 +31,7 @@ public class TestBase {
             Configuration.remote = format("https://%s:%s@%s", credentials.login(), credentials.password(),System.getProperty("url"));
 //          gradle clean test -Durl=selenoid.autotests.cloud/wd/hub/
 //          gradle clean test -Durl='selenoid.autotests.cloud/wd/hub/'
+//          gradle clean test -Durl='127.0.0.1'
 //          C:\Users\White\.jdks\liberica-11.0.12
     }
 
