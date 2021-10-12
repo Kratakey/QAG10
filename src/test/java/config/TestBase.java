@@ -7,7 +7,6 @@ import io.qameta.allure.selenide.AllureSelenide;
 import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Test;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 
@@ -18,16 +17,16 @@ public class TestBase {
 
     @BeforeAll
     public static void browserInitialConfiguration() {
-            SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
+        SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
 
-            DesiredCapabilities capabilities = new DesiredCapabilities();
-            capabilities.setCapability("enableVNC", true);
-            capabilities.setCapability("enableVideo", true);
+        DesiredCapabilities capabilities = new DesiredCapabilities();
+        capabilities.setCapability("enableVNC", true);
+        capabilities.setCapability("enableVideo", true);
 
-            Configuration.browserCapabilities = capabilities;
-            Configuration.startMaximized = true;
+        Configuration.browserCapabilities = capabilities;
+        Configuration.startMaximized = true;
 //            Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub/";
-            Configuration.remote = format("https://%s:%s@%s", credentials.login(), credentials.password(),System.getProperty("url"));
+        Configuration.remote = format("https://%s:%s@%s", credentials.login(), credentials.password(), System.getProperty("url"));
 //          gradle clean test -Durl=selenoid.autotests.cloud/wd/hub/
 //          gradle clean test -Durl='selenoid.autotests.cloud/wd/hub/'
 //          gradle clean test -Durl='127.0.0.1'
