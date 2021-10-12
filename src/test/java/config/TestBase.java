@@ -33,6 +33,7 @@ public class TestBase {
 //          gradle clean test -Durl='selenoid.autotests.cloud/wd/hub/'
 //          gradle clean test -Durl='127.0.0.1'
 //          C:\Users\White\.jdks\liberica-11.0.12
+//      "allureFolder": "C:/Users/White/AppData/Local/Temp/16110949011265510560/allure-report/",
     }
 
     @AfterEach
